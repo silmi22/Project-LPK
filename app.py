@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Judul dan penjelasan
-st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")📈📉
+st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")📉
 st.markdown("""
 Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥️ 
 Gunakan dua input jika ingin mendeteksi gugus kompleks seperti *asam karboksilat*.🔎
