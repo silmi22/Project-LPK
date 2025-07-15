@@ -64,16 +64,17 @@ if st.button("Identifikasi"):
             st.markdown(h)
     else:
         st.warning("Tidak ada nilai yang dikenali.")
-    st.markdown("### 🧬 Struktur Senyawa Contoh:")
+         st.markdown("### 🧬 Struktur Senyawa Contoh:")
 
-    if any("Asam Karboksilat" in h for h in hasil):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Acetic_acid_structures.png/506px-Acetic_acid_structures.png",
-                 caption="Struktur Asam Asetat (Asam Karboksilat)", use_column_width=True)
+    if any("asam karboksilat" in h.lower() for h in hasil):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Acetic_acid_structures.png/506px-Acetic_acid_structures.png",
+                 caption="Struktur Asam Asetat (Asam Karboksilat)", use_column_width=True)
 
-    if any("C=C (Aromatik)" in h for h in hasil):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Benzene_Ring_structure_diagram.png/800px-Benzene_Ring_structure_diagram.png",
-                 caption="Struktur Benzena (C=C Aromatik)", use_column_width=True)
+    if any("aromatik" in h.lower() for h in hasil):
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Benzene_Ring_structure_diagram.png/800px-Benzene_Ring_structure_diagram.png",
+                 caption="Struktur Benzena (C=C Aromatik)", use_column_width=True)
 
 else:
-    st.warning("Tidak ada nilai yang dikenali.")
+    st.warning("Tidak ada nilai yang dikenali.")
+    
 
