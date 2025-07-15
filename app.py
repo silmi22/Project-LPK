@@ -64,9 +64,6 @@ if st.button("Identifikasi"):
             st.markdown(h)
     else:
         st.warning("Tidak ada nilai yang dikenali.")
-        
-         st.markdown("### 🧬 Struktur Senyawa Contoh:")
-
     if any("asam karboksilat" in h.lower() for h in hasil):
         st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Acetic_acid_structures.png/506px-Acetic_acid_structures.png",
                  caption="Struktur Asam Asetat (Asam Karboksilat)", use_column_width=True)
