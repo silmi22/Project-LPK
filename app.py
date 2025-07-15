@@ -64,8 +64,6 @@ if st.button("Identifikasi"):
             st.markdown(h)
     else:
         st.warning("Tidak ada nilai yang dikenali.")
-        
-    # Langsung tampilkan hasil, tanpa if hasil:
 st.markdown("### Hasil Identifikasi:")
 for h in hasil:
     st.markdown(h)
