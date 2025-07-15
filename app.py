@@ -64,6 +64,7 @@ if st.button("Identifikasi"):
             st.markdown(h)
     else:
         st.warning("Tidak ada nilai yang dikenali.")
+        
          st.markdown("### 🧬 Struktur Senyawa Contoh:")
 
     if any("asam karboksilat" in h.lower() for h in hasil):
