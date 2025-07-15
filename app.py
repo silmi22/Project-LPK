@@ -1,10 +1,10 @@
 import streamlit as st
 
 # Judul dan penjelasan
-st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")
+st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")📈📉
 st.markdown("""
-Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi.  
-Gunakan dua input jika ingin mendeteksi gugus kompleks seperti *asam karboksilat*.
+Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥️ 
+Gunakan dua input jika ingin mendeteksi gugus kompleks seperti *asam karboksilat*.🔎
 """)
 
 # Input gelombang
@@ -25,7 +25,7 @@ gugus_fungsi = [
     {"rentang": (3000, 3000), "gugus": "C–H aromatik/vinil (sebelah kiri 3000 cm⁻¹)"},
     {"rentang": (3000, 3000), "gugus": "C–H alifatik (sebelah kanan 3000 cm⁻¹)"},
     {"rentang": (2250, 2250), "gugus": "C≡N (Nitril)"},
-    {"rentang": (2150, 2150), "gugus": "C≡C (Alkina)"},
+    {"rentang": (2150, 2150), "gugus": "C≡C (Alkuna)"},
     {"rentang": (3300, 3300), "gugus": "≡C–H (asetilenik)"},
     {"rentang": (1600, 1500), "gugus": "NO₂ – pita kuat"},
     {"rentang": (1390, 1300), "gugus": "NO₂ – pita tambahan"},
