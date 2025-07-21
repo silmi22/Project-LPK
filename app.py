@@ -1,15 +1,45 @@
 import streamlit as st
 
-# Judul dan penjelasan
-st.title("Interpretasi Spektrum Infra Red")
+# Sidebar info tambahan
+opsi = st.sidebar.radio("📚 Pilihan Informasi Tambahan:", ["—", "Teori IR", "Tujuan Aplikasi", "Pembuat Aplikasi"])
+
+if opsi == "Teori IR":
+    st.subheader("📖 Teori Dasar Spektrum IR")
+    st.markdown("""
+Spektroskopi Inframerah (IR) digunakan untuk mengidentifikasi gugus fungsi berdasarkan getaran ikatan dalam molekul.  
+Setiap gugus memiliki rentang frekuensi tertentu yang menyerap sinar IR, menghasilkan *pita serapan* pada spektrum.
+
+- Getaran ikatan seperti *regangan (stretching)* dan *tekukan (bending)* menghasilkan pita serapan.
+- Misalnya, ikatan C=O biasanya muncul pada sekitar *1700 cm⁻¹, sementara O–H yang lebar muncul di atas **3200 cm⁻¹*.
+    """)
+
+elif opsi == "Tujuan Aplikasi":
+    st.subheader("🎯 Tujuan Aplikasi")
+    st.markdown("""
+Aplikasi ini bertujuan untuk membantu pengguna, terutama pelajar dan mahasiswa, dalam:
+- Menginterpretasikan panjang gelombang IR menjadi *kemungkinan gugus fungsi*,
+- Meningkatkan pemahaman *korelasi antara spektrum dan struktur senyawa*,
+- Mempercepat proses analisis kualitatif senyawa organik berdasarkan data IR.
+    """)
+
+elif opsi == "Pembuat Aplikasi":
+    st.subheader("👨‍💻 Pembuat Aplikasi")
+    st.markdown("""
+- *Nama*: [Isikan Nama Anda]
+- *Institusi*: [Contoh: Universitas X]
+- *Keterangan: Aplikasi ini dikembangkan menggunakan **Python* dan *Streamlit* sebagai bagian dari tugas/penelitian untuk interpretasi spektrum IR.
+    """)
+
+# Judul dan penjelasan utama
+st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")
 st.markdown("""
-Masukkan satu atau dua nilai bilangan gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥️ 
-Gunakan dua input jika ingin mendeteksi gugus kompleks seperti *asam karboksilat*.🔎
+Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥 
+Gunakan dua input jika ingin mendeteksi gugus kompleks seperti asam karboksilat.🔎
 """)
 
 # Input gelombang
-nilai1 = st.number_input("Bilangan gelombang IR pertama (cm⁻¹)", min_value=1000, max_value=3600, step=1)
-nilai2 = st.number_input("Bilangan gelombang IR kedua (opsional)", min_value=0, max_value=3600, step=1)
+nilai1 = st.number_input("Panjang gelombang IR pertama (cm⁻¹)", min_value=400, max_value=4000, step=1)
+nilai2 = st.number_input("Panjang gelombang IR kedua (opsional)", min_value=0, max_value=4000, step=1)
 
 # Daftar rentang dan gugus (sesuai slide)
 gugus_fungsi = [
@@ -43,7 +73,7 @@ if st.button("Identifikasi"):
         (1820 >= nilai1 >= 1660 and 3400 >= nilai2 >= 2400) or
         (1820 >= nilai2 >= 1660 and 3400 >= nilai1 >= 2400)
     ):
-        hasil.append("🔴 *Kemungkinan besar: Asam Karboksilat (–COOH)*")
+        hasil.append("🔴 Kemungkinan besar: Asam Karboksilat (–COOH)")
 
     # Cek masing-masing nilai terhadap daftar rentang
     for nilai in [nilai1, nilai2]:
@@ -64,4 +94,3 @@ if st.button("Identifikasi"):
             st.markdown(h)
     else:
         st.warning("Tidak ada nilai yang dikenali.")
-
