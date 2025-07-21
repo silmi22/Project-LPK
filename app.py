@@ -1,15 +1,15 @@
 import streamlit as st
 
 # Judul dan penjelasan
-st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")
+st.title("Interpretasi Spektrum Infra Red")
 st.markdown("""
-Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥️ 
+Masukkan satu atau dua nilai bilangan gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥️ 
 Gunakan dua input jika ingin mendeteksi gugus kompleks seperti *asam karboksilat*.🔎
 """)
 
 # Input gelombang
-nilai1 = st.number_input("Panjang gelombang IR pertama (cm⁻¹)", min_value=400, max_value=4000, step=1)
-nilai2 = st.number_input("Panjang gelombang IR kedua (opsional)", min_value=0, max_value=4000, step=1)
+nilai1 = st.number_input("Bilangan gelombang IR pertama (cm⁻¹)", min_value=1000, max_value=3600, step=1)
+nilai2 = st.number_input("Bilangan gelombang IR kedua (opsional)", min_value=0, max_value=3600, step=1)
 
 # Daftar rentang dan gugus (sesuai slide)
 gugus_fungsi = [
