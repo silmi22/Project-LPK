@@ -1,13 +1,13 @@
 import streamlit as st
 
 # Sidebar info tambahan
-opsi = st.sidebar.radio("📚 Pilihan Informasi Tambahan:", ["—", "Teori IR(infra red)", "Tujuan Aplikasi", "Pembuat Aplikasi"])
+opsi = st.sidebar.radio("📚 Pilihan Informasi Tambahan:", ["—", "Teori IR", "Tujuan Aplikasi", "Pembuat Aplikasi"])
 
-if opsi == "Teori Infra Red":
-    st.subheader("📖 Teori Dasar Spektrum Infra Red")
+if opsi == "Teori IR":
+    st.subheader("📖 Teori Dasar Spektrum IR")
     st.markdown("""
 Spektroskopi Inframerah (IR) digunakan untuk mengidentifikasi gugus fungsi berdasarkan getaran ikatan dalam molekul.  
-Setiap gugus memiliki rentang frekuensi tertentu yang menyerap sinar IR(infra red), menghasilkan *pita serapan* pada spektrum.
+Setiap gugus memiliki rentang frekuensi tertentu yang menyerap sinar IR, menghasilkan *pita serapan* pada spektrum.
 
 - Getaran ikatan seperti *regangan (stretching)* dan *tekukan (bending)* menghasilkan pita serapan.
 - Misalnya, ikatan C=O biasanya muncul pada sekitar *1700 cm⁻¹, sementara O–H yang lebar muncul di atas **3200 cm⁻¹*.
@@ -25,21 +25,21 @@ Aplikasi ini bertujuan untuk membantu pengguna, terutama pelajar dan mahasiswa, 
 elif opsi == "Pembuat Aplikasi":
     st.subheader("👨‍💻 Pembuat Aplikasi")
     st.markdown("""
-- *Nama*: [Annisa Balqis, Fachria Ilmi, Marsya Putri, Nasywa Artha, Silmi Kaffah]
-- *Institusi*: [Politeknik AKA Bogor]
+- *Nama*: [Isikan Nama Anda]
+- *Institusi*: [Contoh: Universitas X]
 - *Keterangan: Aplikasi ini dikembangkan menggunakan **Python* dan *Streamlit* sebagai bagian dari tugas/penelitian untuk interpretasi spektrum IR.
     """)
 
 # Judul dan penjelasan utama
-st.title("Interpretasi Spektrum Infra Red")
+st.title("Interpretasi Spektrum IR (Sesuai Slide Referensi)")
 st.markdown("""
-Masukkan satu atau dua nilai bilangan gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥 
+Masukkan satu atau dua nilai panjang gelombang IR (cm⁻¹) untuk mengidentifikasi kemungkinan gugus fungsi. 🖥 
 Gunakan dua input jika ingin mendeteksi gugus kompleks seperti asam karboksilat.🔎
 """)
 
 # Input gelombang
-nilai1 = st.number_input("Bilangan gelombang Infra Red pertama (cm⁻¹)", min_value=1000, max_value=3600, step=1)
-nilai2 = st.number_input("Bilangan gelombang Infa Red kedua (opsional)", min_value=0, max_value=3600, step=1)
+nilai1 = st.number_input("Panjang gelombang IR pertama (cm⁻¹)", min_value=400, max_value=4000, step=1)
+nilai2 = st.number_input("Panjang gelombang IR kedua (opsional)", min_value=0, max_value=4000, step=1)
 
 # Daftar rentang dan gugus (sesuai slide)
 gugus_fungsi = [
