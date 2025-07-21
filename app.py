@@ -3,7 +3,7 @@ import streamlit as st
 # Sidebar info tambahan
 opsi = st.sidebar.radio("📚 Pilihan Informasi Tambahan:", ["—", "Teori IR(infra red)", "Tujuan Aplikasi", "Pembuat Aplikasi"])
 
-if opsi == "Teori IR":
+if opsi == "Teori Infra Red":
     st.subheader("📖 Teori Dasar Spektrum IR")
     st.markdown("""
 Spektroskopi Inframerah (IR) digunakan untuk mengidentifikasi gugus fungsi berdasarkan getaran ikatan dalam molekul.  
