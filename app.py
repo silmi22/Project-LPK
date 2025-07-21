@@ -25,7 +25,7 @@ Aplikasi ini bertujuan untuk membantu pengguna, terutama pelajar dan mahasiswa, 
 elif opsi == "Pembuat Aplikasi":
     st.subheader("👨‍💻 Pembuat Aplikasi")
     st.markdown("""
-- *Nama*: [Kelompok 5D]
+- *Nama*: [Annisa Balqis, Fachria Ilmi, Marsya Putri, Nasywa Artha, Silmi Kaffah]
 - *Institusi*: [Politeknik AKA Bogor]
 - *Keterangan: Aplikasi ini dikembangkan menggunakan **Python* dan *Streamlit* sebagai bagian dari tugas/penelitian untuk interpretasi spektrum IR.
     """)
